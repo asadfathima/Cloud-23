@@ -1,152 +1,40 @@
 <p align="center">
   <img src="assets/architecture.png" height=110>
-</p>archi
-sss
-## Towards Robust Blind Face Restoration with Codebook Lookup Transformer (NeurIPS 2022)
+</p>
+Project summary:
+This project focuses on the image restoration of old and tampered images along with this it also focuses on AI Generated Images. 
+•What are the challenges of this project?
+Image processing and analysis: Face restoration often involves complex image processing and analysis algorithms that can be computationally intensive and require significant computational resources. 
+Scalability and reliability: A web-based face restoration program needs to be scalable and reliable, as it is expected to handle a large number of requests from users.
+Performance optimization: Optimizing the performance of a web-based face restoration program can be difficult, as it requires balancing the trade-offs between accuracy, speed, and resource utilization. 
+User experience: The user experience is an important factor in the success of a web-based face restoration program, as users expect a fast and reliable service that provides high-quality results.
+•What cloud services do you expect to use ?
+PaaS - App Engine 
+Google cloud functions
+Cloud Storage
+•What data or other resources are you going to use ?
+Data - We will use different pictures that might have blurriness , discoloration , cropped and aligned faces (Image enhancement) available on the web.
+•What reading will you explore to provide context and background? If relevant, what papers do you refer to?
+Context & background : We have found a few papers which were used as references
+Paper reference :
+https://www.semanticscholar.org/paper/GLEAN%3A-Generative-Latent-Bank-for-Large-Factor-Chan-Wang/18bf61eb27c146f8e11ea0590c9b6787d8274ce6
+https://arxiv.org/pdf/2203.08444.pdf
+https://arxiv.org/pdf/2005.05005.pdf
+•How will you evaluate your results?
+Processing time for images (Speed of the program)
+Accuracy of outputs.
+Collect and label data: Collect a set of data (e.g., images of faces) and label it with ground-truth information (e.g., the original appearance of the face).
+•What references you plan to use. ( github repos, etc)?
+github repo - ( https://github.com/TencentARC/GFPGAN)
+Stackoverflow (https://stackoverflow.blog/2021/06/14/lets-enhance-use-intel-ai-to-increase-image-resolution-in-this-demo/)
+gray literature/papers with similar functional code - (https://paperswithcode.com/paper/blind-face-restoration-via-deep-multi-scale) 
+•What demo do you expect to show at the end of term?
 
-[Paper](https://arxiv.org/abs/2206.11253) | [Project Page](https://shangchenzhou.com/projects/CodeFormer/) | [Video](https://youtu.be/d3VDpkXlueI)
-
-
-<a href="https://colab.research.google.com/drive/1m52PNveE4PBhYrecj34cnpEeiHcC5LTb?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a> [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/sczhou/CodeFormer) [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/sczhou/codeformer) ![visitors](https://visitor-badge-sczhou.glitch.me/badge?page_id=sczhou/CodeFormer)
-
-
-
-[Shangchen Zhou](https://shangchenzhou.com/), [Kelvin C.K. Chan](https://ckkelvinchan.github.io/), [Chongyi Li](https://li-chongyi.github.io/), [Chen Change Loy](https://www.mmlab-ntu.com/person/ccloy/) 
-
-S-Lab, Nanyang Technological Universitys
-
-<img src="assets/network.jpg" width="800px"/>
-
-
-:star: If CodeFormer is helpful to your images or projects, please help star this repo. Thanks! :hugs: 
-
-**[<font color=#d1585d>News</font>]**: :whale: *We regret to inform you that the release of our code will be postponed from its earlier plan. Nevertheless, we assure you that it will be made available **by the end of this April**. Thank you for your understanding and patience. Our apologies for any inconvenience this may cause.* 
-### Update
-- **2023.02.10**: Include `dlib` as a new face detector option, it produces more accurate face identity.
-- **2022.10.05**: Support video input `--input_path [YOUR_VIDOE.mp4]`. Try it to enhance your videos! :clapper: 
-- **2022.09.14**: Integrated to :hugs: [Hugging Face](https://huggingface.co/spaces). Try out online demo! [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/sczhou/CodeFormer)
-- **2022.09.09**: Integrated to :rocket: [Replicate](https://replicate.com/explore). Try out online demo! [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/sczhou/codeformer)
-- **2022.09.04**: Add face upsampling `--face_upsample` for high-resolution AI-created face enhancement.
-- **2022.08.23**: Some modifications on face detection and fusion for better AI-created face enhancement.
-- **2022.08.07**: Integrate [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) to support background image enhancement.
-- **2022.07.29**: Integrate new face detectors of `['RetinaFace'(default), 'YOLOv5']`. 
-- **2022.07.17**: Add Colab demo of CodeFormer. <a href="https://colab.research.google.com/drive/1m52PNveE4PBhYrecj34cnpEeiHcC5LTb?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="google colab logo"></a>
-- **2022.07.16**: Release inference code for face restoration. :blush:
-- **2022.06.21**: This repo is created.
-
-### TODO
-- [ ] Add checkpoint for face inpainting
-- [ ] Add checkpoint for face colorization
-- [ ] Add training code and config files
-- [x] ~~Add background image enhancement~~
-
-#### :panda_face: Try Enhancing Old Photos / Fixing AI-arts
-[<img src="assets/imgsli_1.jpg" height="226px"/>](https://imgsli.com/MTI3NTE2) [<img src="assets/imgsli_2.jpg" height="226px"/>](https://imgsli.com/MTI3NTE1) [<img src="assets/imgsli_3.jpg" height="226px"/>](https://imgsli.com/MTI3NTIw) 
-
-#### Face Restoration
-
-<img src="assets/restoration_result1.png" width="400px"/> <img src="assets/restoration_result2.png" width="400px"/>
-<img src="assets/restoration_result3.png" width="400px"/> <img src="assets/restoration_result4.png" width="400px"/>
-
-#### Face Color Enhancement and Restoration
-
-<img src="assets/color_enhancement_result1.png" width="400px"/> <img src="assets/color_enhancement_result2.png" width="400px"/>
-
-#### Face Inpainting
-
-<img src="assets/inpainting_result1.png" width="400px"/> <img src="assets/inpainting_result2.png" width="400px"/>
+A functioning web application with an image restoration algorithm showcasing a set of images that were obtained as a result. ( original Vs restored ) 
 
 
+Data gathering: The first stage is to gather a sizable dataset of old or artificial intelligence (AI)-generated photographs. The face restoration algorithm will be trained using the provided dataset. To guarantee that the algorithm is capable of handling a wide range of image quality and style, the dataset should contain photos from many sources and historical periods.
+Pre-processing:  is necessary to get rid of any noise or artifacts that can impede the restoration process from the gathered dataset. Noise reduction, color balance, and image resizing could all be included in this step.
+Feature Extraction: Extraction of features from the photos is the following stage. This step entails recognizing important face characteristics like the mouth, nose, and eyes. Computer vision techniques like face detection and landmark detection are used to extract the features.
+Image restoration: The image is restored using the features that were extracted. At this step, convolutional neural networks (CNNs), a deep learning approach, are used to forecast missing or damaged portions of the image. The pre-processed dataset is used to train the CNNs on how to restore the images.
 
-### Dependencies and Installation
-
-- Pytorch >= 1.7.1
-- CUDA >= 10.1
-- Other required packages in `requirements.txt`
-```
-# git clone this repository
-git clone https://github.com/sczhou/CodeFormer
-cd CodeFormer
-
-# create new anaconda env
-conda create -n codeformer python=3.8 -y
-conda activate codeformer
-
-# install python dependencies
-pip3 install -r requirements.txt
-python basicsr/setup.py develop
-conda install -c conda-forge dlib (only for dlib face detector)
-```
-<!-- conda install -c conda-forge dlib -->
-
-### Quick Inference
-
-#### Download Pre-trained Models:
-Download the facelib and dlib pretrained models from [[Google Drive](https://drive.google.com/drive/folders/1b_3qwrzY_kTQh0-SnBoGBgOrJ_PLZSKm?usp=sharing) | [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/s200094_e_ntu_edu_sg/EvDxR7FcAbZMp_MA9ouq7aQB8XTppMb3-T0uGZ_2anI2mg?e=DXsJFo)] to the `weights/facelib` folder. You can manually download the pretrained models OR download by running the following command.
-```
-python scripts/download_pretrained_models.py facelib
-python scripts/download_pretrained_models.py dlib (only for dlib face detector)
-```
-
-Download the CodeFormer pretrained models from [[Google Drive](https://drive.google.com/drive/folders/1CNNByjHDFt0b95q54yMVp6Ifo5iuU6QS?usp=sharing) | [OneDrive](https://entuedu-my.sharepoint.com/:f:/g/personal/s200094_e_ntu_edu_sg/EoKFj4wo8cdIn2-TY2IV6CYBhZ0pIG4kUOeHdPR_A5nlbg?e=AO8UN9)] to the `weights/CodeFormer` folder. You can manually download the pretrained models OR download by running the following command.
-```
-python scripts/download_pretrained_models.py CodeFormer
-```
-
-#### Prepare Testing Data:
-You can put the testing images in the `inputs/TestWhole` folder. If you would like to test on cropped and aligned faces, you can put them in the `inputs/cropped_faces` folder.
-
-
-#### Testing on Face Restoration:
-[Note] If you want to compare CodeFormer in your paper, please run the following command indicating `--has_aligned` (for cropped and aligned face), as the command for the whole image will involve a process of face-background fusion that may damage hair texture on the boundary, which leads to unfair comparison.
-
-🧑🏻 Face Restoration (cropped and aligned face)
-```
-# For cropped and aligned faces
-python inference_codeformer.py -w 0.5 --has_aligned --input_path [image folder]|[image path]
-```
-
-:framed_picture: Whole Image Enhancement
-```
-# For whole image
-# Add '--bg_upsampler realesrgan' to enhance the background regions with Real-ESRGAN
-# Add '--face_upsample' to further upsample restorated face with Real-ESRGAN
-python inference_codeformer.py -w 0.7 --input_path [image folder]|[image path]
-```
-
-:clapper: Video Enhancement
-```
-# For Windows/Mac users, please install ffmpeg first
-conda install -c conda-forge ffmpeg
-```
-```
-# For video clips
-# video path should end with '.mp4'|'.mov'|'.avi'
-python inference_codeformer.py --bg_upsampler realesrgan --face_upsample -w 1.0 --input_path [video path]
-```
-
-
-Fidelity weight *w* lays in [0, 1]. Generally, smaller *w* tends to produce a higher-quality result, while larger *w* yields a higher-fidelity result. 
-
-The results will be saved in the `results` folder.
-
-### Citation
-If our work is useful for your research, please consider citing:
-
-    @inproceedings{zhou2022codeformer,
-        author = {Zhou, Shangchen and Chan, Kelvin C.K. and Li, Chongyi and Loy, Chen Change},
-        title = {Towards Robust Blind Face Restoration with Codebook Lookup TransFormer},
-        booktitle = {NeurIPS},
-        year = {2022}
-    }
-
-### License
-
-This project is licensed under <a rel="license" href="https://github.com/sczhou/CodeFormer/blob/master/LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.
-
-### Acknowledgement
-
-This project is based on [BasicSR](https://github.com/XPixelGroup/BasicSR). Some codes are brought from [Unleashing Transformers](https://github.com/samb-t/unleashing-transformers), [YOLOv5-face](https://github.com/deepcam-cn/yolov5-face), and [FaceXLib](https://github.com/xinntao/facexlib). We also adopt [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) to support background image enhancement. Thanks for their awesome works.
-
-### Contact
-If you have any questions, please feel free to reach me out at `shangchenzhou@gmail.com`.
